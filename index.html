@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaStore | Compra Inteligente</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f8f9fb;color:#222;}
+header{
+background:linear-gradient(135deg,#111,#333);
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+header h1{font-weight:800;}
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:500;
+}
+.hero{
+background:url('https://images.unsplash.com/photo-1607082349566-187342175e2f') center/cover;
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+padding:20px;
+}
+.hero h2{font-size:3rem;font-weight:800;}
+.hero p{margin:20px 0;font-size:1.2rem;}
+.btn{
+background:#ff3c78;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+.btn:hover{background:#ff0055;}
+.section{
+padding:80px 10%;
+text-align:center;
+}
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-10px);}
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+.price{color:#ff3c78;font-size:1.3rem;font-weight:700;margin:10px 0;}
+footer{
+background:#111;
+color:white;
+padding:40px;
+text-align:center;
+}
+.contact a{
+display:inline-block;
+margin:10px;
+color:#ff3c78;
+text-decoration:none;
+font-weight:600;
+}
+iframe{
+width:100%;
+height:300px;
+border-radius:15px;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>NovaStore</h1>
+<nav>
+<a href="#productos">Productos</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Compra Inteligente. Envíos Rápidos.</h2>
+<p>Los productos más virales y útiles del momento</p>
+<a href="#productos" class="btn">Ver Productos</a>
+</section>
+
+<section class="section" id="productos">
+<h2>Nuestros Productos</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad" alt="">
+<h3>Luz LED Inteligente</h3>
+<p class="price">$19.990</p>
+<a href="https://wa.me/569XXXXXXXX" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5" alt="">
+<h3>Soporte Ajustable Laptop</h3>
+<p class="price">$24.990</p>
+<a href="https://wa.me/569XXXXXXXX" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f" alt="">
+<h3>Gafas Premium UV</h3>
+<p class="price">$14.990</p>
+<a href="https://wa.me/569XXXXXXXX" class="btn">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="nosotros">
+<h2>¿Por qué elegirnos?</h2>
+<p>✔ Productos tendencia mundial</p>
+<p>✔ Envíos rápidos a todo Chile</p>
+<p>✔ Pago seguro</p>
+<p>✔ Garantía de satisfacción</p>
+</section>
+
+<section class="section" id="contacto">
+<h2>Contacto</h2>
+<div class="contact">
+<a href="https://wa.me/569XXXXXXXX">WhatsApp</a>
+<a href="mailto:contacto@novastore.cl">Email</a>
+</div>
+
+<h3>Ubicación</h3>
+<iframe src="https://maps.google.com/maps?q=Santiago%20Chile&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<footer>
+<p>© 2026 NovaStore - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
