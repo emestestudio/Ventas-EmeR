@@ -23,213 +23,224 @@ background:#0a0a0a;
 color:white;
 }
 
-/* NAV */
+/* NAVBAR */
 
 header{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 10%;
 background:black;
-
+border-bottom:1px solid #222;
 }
 
 .logo{
-
 font-size:28px;
 font-weight:700;
-background:linear-gradient(45deg,#ff00cc,#8a2be2);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
+color:#d4af37;
 }
 
 nav a{
-
-color:white;
-margin-left:25px;
+color:#ccc;
 text-decoration:none;
+margin-left:25px;
+font-size:14px;
+}
 
+nav a:hover{
+color:#d4af37;
 }
 
 /* HERO */
 
 .hero{
-
-height:500px;
+height:550px;
 display:flex;
 align-items:center;
 padding-left:10%;
-
 background:
-linear-gradient(90deg,#000 30%,transparent),
+linear-gradient(90deg,#000000 40%,transparent),
 url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
-
 background-size:cover;
-
+background-position:center;
 }
 
 .hero h1{
+font-size:55px;
+}
 
-font-size:60px;
+.hero span{
+color:#d4af37;
+}
 
+.hero p{
+margin-top:10px;
+color:#ccc;
 }
 
 .hero button{
-
 margin-top:20px;
-padding:15px 30px;
-background:linear-gradient(45deg,#ff00cc,#8a2be2);
+padding:14px 30px;
+background:#d4af37;
 border:none;
-color:white;
 font-weight:600;
 cursor:pointer;
+}
 
+/* BENEFICIOS */
+
+.benefits{
+display:flex;
+justify-content:space-around;
+padding:20px;
+background:#111;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
 }
 
 /* PRODUCTOS */
 
 .products{
-
 padding:70px 10%;
 text-align:center;
-
 }
 
 .products h2{
-
+color:#d4af37;
 margin-bottom:40px;
-color:#ff00cc;
-
 }
 
 .grid{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
-
 }
 
-.card{
-
+.product{
 background:#111;
-padding:20px;
-border-radius:10px;
+padding:15px;
+border-radius:8px;
 transition:.3s;
-
 }
 
-.card:hover{
-
-transform:translateY(-10px);
-
+.product:hover{
+transform:translateY(-8px);
 }
 
-.card img{
-
+.product img{
 width:100%;
 height:200px;
 object-fit:cover;
+border-radius:6px;
+}
 
+.product h3{
+margin-top:10px;
 }
 
 .price{
-
-color:#ff00cc;
+color:#d4af37;
+margin-top:5px;
 font-weight:bold;
-
 }
 
-.card button{
-
+.product button{
 margin-top:10px;
 padding:12px;
 border:none;
-background:linear-gradient(45deg,#ff00cc,#8a2be2);
-color:white;
+background:#d4af37;
 cursor:pointer;
 width:100%;
-
+font-weight:600;
 }
 
-/* CARRITO */
+/* OFERTAS */
 
-.cart{
+.offers{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+padding:60px 10%;
+}
 
-position:fixed;
-right:0;
-top:0;
-height:100%;
-width:320px;
+.offer{
 background:#111;
-padding:20px;
-transform:translateX(100%);
-transition:.4s;
-overflow:auto;
-
+padding:40px;
+border-radius:8px;
 }
 
-.cart.active{
-
-transform:translateX(0);
-
-}
-
-.cart h2{
-
-color:#ff00cc;
-
-}
-
-.cart-item{
-
-margin-top:15px;
-border-bottom:1px solid #333;
-padding-bottom:10px;
-
-}
-
-/* BOTON CARRITO */
-
-.cart-btn{
-
-position:fixed;
-bottom:30px;
-right:30px;
-background:linear-gradient(45deg,#ff00cc,#8a2be2);
-padding:15px;
-border-radius:50%;
-cursor:pointer;
-
+.offer h3{
+color:#d4af37;
+font-size:26px;
 }
 
 /* PAGOS */
 
 .payments{
-
-padding:40px;
 text-align:center;
+padding:40px;
 background:#050505;
-
 }
 
 .payments img{
-
 height:40px;
 margin:10px;
-
 }
 
 /* FOOTER */
 
 footer{
-
 text-align:center;
 padding:30px;
 background:black;
+margin-top:40px;
+}
 
+/* CARRITO */
+
+.cart{
+position:fixed;
+right:0;
+top:0;
+width:320px;
+height:100%;
+background:#111;
+padding:20px;
+transform:translateX(100%);
+transition:.4s;
+overflow:auto;
+}
+
+.cart.active{
+transform:translateX(0);
+}
+
+.cart-item{
+margin-top:15px;
+border-bottom:1px solid #333;
+padding-bottom:10px;
+}
+
+.cart-btn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#d4af37;
+padding:15px;
+border-radius:50%;
+cursor:pointer;
+font-size:22px;
+}
+
+.checkout{
+display:block;
+margin-top:20px;
+background:#d4af37;
+padding:15px;
+text-align:center;
+text-decoration:none;
+color:black;
+font-weight:bold;
 }
 
 </style>
@@ -237,6 +248,7 @@ background:black;
 </head>
 
 <body>
+
 
 <header>
 
@@ -247,6 +259,7 @@ background:black;
 <a href="#">Inicio</a>
 <a href="#">Moda</a>
 <a href="#">Tecnología</a>
+<a href="#">Hogar</a>
 <a href="#">Ofertas</a>
 
 </nav>
@@ -259,11 +272,11 @@ background:black;
 
 <div>
 
-<h1>EMESTÉ</h1>
+<h1>LA ELECCIÓN AL ALCANCE <br><span>DE TUS MANOS</span></h1>
 
-<p>La elección al alcance de tus manos</p>
+<p>Encuentra todo lo que buscas en un solo lugar</p>
 
-<button>Comprar ahora</button>
+<button onclick="scrollProducts()">Ver Ofertas</button>
 
 </div>
 
@@ -271,13 +284,24 @@ background:black;
 
 
 
-<section class="products">
+<section class="benefits">
 
-<h2>Productos Destacados</h2>
+<div>🚚 Envíos a todo Chile</div>
+<div>🔒 Pagos seguros</div>
+<div>💬 Atención 24/7</div>
+
+</section>
+
+
+
+<section id="products" class="products">
+
+<h2>PRODUCTOS DESTACADOS</h2>
 
 <div class="grid">
 
-<div class="card">
+
+<div class="product">
 
 <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b">
 
@@ -290,24 +314,24 @@ background:black;
 </div>
 
 
-<div class="card">
+<div class="product">
 
-<img src="https://images.unsplash.com/photo-1518444028785-8fbcd101ebb9">
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
 
-<h3>Audífonos Bluetooth</h3>
+<h3>Polera Blanca EMESTÉ</h3>
 
-<p class="price">$28.990</p>
+<p class="price">$14.990</p>
 
-<button onclick="addCart('Audifonos',28990)">Agregar al carrito</button>
+<button onclick="addCart('Polera EMESTÉ',14990)">Agregar al carrito</button>
 
 </div>
 
 
-<div class="card">
+<div class="product">
 
 <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12">
 
-<h3>Smartwatch</h3>
+<h3>Smartwatch Deportivo</h3>
 
 <p class="price">$29.990</p>
 
@@ -316,7 +340,7 @@ background:black;
 </div>
 
 
-<div class="card">
+<div class="product">
 
 <img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa">
 
@@ -328,29 +352,33 @@ background:black;
 
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<div class="cart" id="cart">
+<section class="offers">
 
-<h2>Carrito</h2>
+<div class="offer">
 
-<div id="cart-items"></div>
+<h3>SÚPER REBAJAS</h3>
 
-<h3 id="total"></h3>
+<p>Hasta 50% de descuento</p>
+
+</div>
+
+
+<div class="offer">
+
+<h3>TECNOLOGÍA TOP</h3>
+
+<p>Lo último en gadgets</p>
 
 </div>
 
-
-
-<div class="cart-btn" onclick="toggleCart()">
-
-🛒
-
-</div>
+</section>
 
 
 
@@ -359,10 +387,9 @@ background:black;
 <h3>Métodos de pago</h3>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg">
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg">
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/MercadoPago_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Webpay_logo.svg">
 
 </section>
 
@@ -376,13 +403,39 @@ background:black;
 
 
 
+<div class="cart" id="cart">
+
+<h2>Carrito</h2>
+
+<div id="cart-items"></div>
+
+<h3 id="total"></h3>
+
+<a class="checkout" href="https://www.mercadopago.cl/" target="_blank">
+Pagar ahora
+</a>
+
+</div>
+
+
+<div class="cart-btn" onclick="toggleCart()">
+
+🛒
+
+</div>
+
+
+
 <script>
 
 let cart=[]
+let total=0
 
 function addCart(name,price){
 
 cart.push({name,price})
+
+total+=price
 
 renderCart()
 
@@ -394,21 +447,9 @@ let container=document.getElementById("cart-items")
 
 container.innerHTML=""
 
-let total=0
-
 cart.forEach(item=>{
 
-total+=item.price
-
-container.innerHTML+=`
-
-<div class="cart-item">
-
-${item.name} - $${item.price}
-
-</div>
-
-`
+container.innerHTML+=`<div class="cart-item">${item.name} - $${item.price}</div>`
 
 })
 
@@ -422,7 +463,14 @@ document.getElementById("cart").classList.toggle("active")
 
 }
 
+function scrollProducts(){
+
+document.getElementById("products").scrollIntoView()
+
+}
+
 </script>
+
 
 </body>
 </html>
