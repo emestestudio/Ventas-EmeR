@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>EMESTÉ Store</title>
 
@@ -24,162 +23,202 @@ background:#0a0a0a;
 color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 
 header{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 10%;
 background:black;
-border-bottom:1px solid #222;
+
 }
 
 .logo{
+
 font-size:28px;
 font-weight:700;
-color:#d4af37;
+background:linear-gradient(45deg,#ff00cc,#8a2be2);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
 }
 
 nav a{
-color:#ddd;
-text-decoration:none;
-margin-left:25px;
-font-size:14px;
-}
 
-nav a:hover{
-color:#d4af37;
+color:white;
+margin-left:25px;
+text-decoration:none;
+
 }
 
 /* HERO */
 
 .hero{
-height:550px;
+
+height:500px;
 display:flex;
 align-items:center;
 padding-left:10%;
-background:linear-gradient(90deg,#000000 40%,transparent),
+
+background:
+linear-gradient(90deg,#000 30%,transparent),
 url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
+
 background-size:cover;
-background-position:center;
+
 }
 
 .hero h1{
-font-size:60px;
-}
 
-.hero p{
-margin-top:10px;
-font-size:20px;
-color:#ccc;
+font-size:60px;
+
 }
 
 .hero button{
-margin-top:25px;
+
+margin-top:20px;
 padding:15px 30px;
-background:#d4af37;
+background:linear-gradient(45deg,#ff00cc,#8a2be2);
 border:none;
+color:white;
 font-weight:600;
 cursor:pointer;
-}
 
-/* CATEGORIAS */
-
-.categories{
-display:flex;
-justify-content:space-around;
-padding:30px;
-border-top:1px solid #222;
-border-bottom:1px solid #222;
-}
-
-.categories div{
-color:#bbb;
 }
 
 /* PRODUCTOS */
 
 .products{
+
 padding:70px 10%;
 text-align:center;
+
 }
 
 .products h2{
-color:#d4af37;
+
 margin-bottom:40px;
+color:#ff00cc;
+
 }
 
 .grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
 
 }
 
 .card{
+
 background:#111;
-border-radius:8px;
 padding:20px;
+border-radius:10px;
 transition:.3s;
+
 }
 
 .card:hover{
-transform:translateY(-5px);
+
+transform:translateY(-10px);
+
 }
 
 .card img{
+
 width:100%;
 height:200px;
 object-fit:cover;
-border-radius:6px;
+
 }
 
-.card h3{
-margin-top:15px;
-}
+.price{
 
-.card p{
-color:#d4af37;
-margin-top:5px;
+color:#ff00cc;
+font-weight:bold;
+
 }
 
 .card button{
 
-margin-top:15px;
-width:100%;
+margin-top:10px;
 padding:12px;
 border:none;
-background:#d4af37;
-font-weight:600;
+background:linear-gradient(45deg,#ff00cc,#8a2be2);
+color:white;
+cursor:pointer;
+width:100%;
+
+}
+
+/* CARRITO */
+
+.cart{
+
+position:fixed;
+right:0;
+top:0;
+height:100%;
+width:320px;
+background:#111;
+padding:20px;
+transform:translateX(100%);
+transition:.4s;
+overflow:auto;
+
+}
+
+.cart.active{
+
+transform:translateX(0);
+
+}
+
+.cart h2{
+
+color:#ff00cc;
+
+}
+
+.cart-item{
+
+margin-top:15px;
+border-bottom:1px solid #333;
+padding-bottom:10px;
+
+}
+
+/* BOTON CARRITO */
+
+.cart-btn{
+
+position:fixed;
+bottom:30px;
+right:30px;
+background:linear-gradient(45deg,#ff00cc,#8a2be2);
+padding:15px;
+border-radius:50%;
 cursor:pointer;
 
 }
 
-/* OFERTAS */
+/* PAGOS */
 
-.offers{
+.payments{
 
-padding:70px 10%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-
-}
-
-.offer{
-
-background:#111;
-padding:50px;
-border-radius:8px;
+padding:40px;
+text-align:center;
+background:#050505;
 
 }
 
-.offer h3{
+.payments img{
 
-color:#d4af37;
-font-size:28px;
+height:40px;
+margin:10px;
 
 }
 
@@ -187,11 +226,9 @@ font-size:28px;
 
 footer{
 
-margin-top:50px;
-background:black;
-padding:40px;
 text-align:center;
-border-top:1px solid #222;
+padding:30px;
+background:black;
 
 }
 
@@ -200,7 +237,6 @@ border-top:1px solid #222;
 </head>
 
 <body>
-
 
 <header>
 
@@ -211,8 +247,6 @@ border-top:1px solid #222;
 <a href="#">Inicio</a>
 <a href="#">Moda</a>
 <a href="#">Tecnología</a>
-<a href="#">Hogar</a>
-<a href="#">Deportes</a>
 <a href="#">Ofertas</a>
 
 </nav>
@@ -237,24 +271,11 @@ border-top:1px solid #222;
 
 
 
-<section class="categories">
-
-<div>Moda</div>
-<div>Tecnología</div>
-<div>Accesorios</div>
-<div>Hogar</div>
-<div>Deportes</div>
-
-</section>
-
-
-
 <section class="products">
 
-<h2>PRODUCTOS DESTACADOS</h2>
+<h2>Productos Destacados</h2>
 
 <div class="grid">
-
 
 <div class="card">
 
@@ -262,9 +283,9 @@ border-top:1px solid #222;
 
 <h3>Gorro EMESTÉ</h3>
 
-<p>$12.990</p>
+<p class="price">$12.990</p>
 
-<button>Agregar al carrito</button>
+<button onclick="addCart('Gorro EMESTÉ',12990)">Agregar al carrito</button>
 
 </div>
 
@@ -275,9 +296,9 @@ border-top:1px solid #222;
 
 <h3>Audífonos Bluetooth</h3>
 
-<p>$28.990</p>
+<p class="price">$28.990</p>
 
-<button>Agregar al carrito</button>
+<button onclick="addCart('Audifonos',28990)">Agregar al carrito</button>
 
 </div>
 
@@ -286,11 +307,11 @@ border-top:1px solid #222;
 
 <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12">
 
-<h3>Smartwatch Deportivo</h3>
+<h3>Smartwatch</h3>
 
-<p>$29.990</p>
+<p class="price">$29.990</p>
 
-<button>Agregar al carrito</button>
+<button onclick="addCart('Smartwatch',29990)">Agregar al carrito</button>
 
 </div>
 
@@ -301,12 +322,11 @@ border-top:1px solid #222;
 
 <h3>Mochila Urbana</h3>
 
-<p>$24.990</p>
+<p class="price">$24.990</p>
 
-<button>Agregar al carrito</button>
+<button onclick="addCart('Mochila',24990)">Agregar al carrito</button>
 
 </div>
-
 
 </div>
 
@@ -314,24 +334,35 @@ border-top:1px solid #222;
 
 
 
-<section class="offers">
+<div class="cart" id="cart">
 
-<div class="offer">
+<h2>Carrito</h2>
 
-<h3>SÚPER REBAJAS</h3>
+<div id="cart-items"></div>
 
-<p>Hasta 50% de descuento</p>
+<h3 id="total"></h3>
+
+</div>
+
+
+
+<div class="cart-btn" onclick="toggleCart()">
+
+🛒
 
 </div>
 
 
-<div class="offer">
 
-<h3>TECNOLOGÍA TOP</h3>
+<section class="payments">
 
-<p>Lo último en gadgets</p>
+<h3>Métodos de pago</h3>
 
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/MercadoPago_logo.svg">
 
 </section>
 
@@ -339,11 +370,59 @@ border-top:1px solid #222;
 
 <footer>
 
-<p>© 2026 EMESTÉ Store</p>
+© 2026 EMESTÉ Store
 
 </footer>
 
 
-</body>
 
+<script>
+
+let cart=[]
+
+function addCart(name,price){
+
+cart.push({name,price})
+
+renderCart()
+
+}
+
+function renderCart(){
+
+let container=document.getElementById("cart-items")
+
+container.innerHTML=""
+
+let total=0
+
+cart.forEach(item=>{
+
+total+=item.price
+
+container.innerHTML+=`
+
+<div class="cart-item">
+
+${item.name} - $${item.price}
+
+</div>
+
+`
+
+})
+
+document.getElementById("total").innerText="Total: $"+total
+
+}
+
+function toggleCart(){
+
+document.getElementById("cart").classList.toggle("active")
+
+}
+
+</script>
+
+</body>
 </html>
