@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,14 +7,185 @@
 
 <title>EMESTÉ Premium</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+
+body{
+margin:0;
+font-family:Montserrat;
+background:#000;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.9);
+z-index:100;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:#ff2ad4;
+}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:white;
+font-weight:300;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:radial-gradient(circle,#2a002a,#000);
+}
+
+.hero h1{
+font-size:65px;
+color:#ff2ad4;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.8;
+}
+
+.btn{
+background:#ff2ad4;
+padding:16px 40px;
+border-radius:40px;
+color:white;
+text-decoration:none;
+display:inline-block;
+margin-top:25px;
+transition:0.4s;
+}
+
+.btn:hover{
+box-shadow:0 0 30px #ff2ad4;
+transform:scale(1.05);
+}
+
+.video{
+padding:120px 20px;
+text-align:center;
+}
+
+.video iframe{
+width:70%;
+height:420px;
+border-radius:20px;
+}
+
+.productos{
+padding:120px 80px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:60px;
+}
+
+.producto{
+background:#0a0a0a;
+border-radius:20px;
+padding:20px;
+text-align:center;
+transition:0.4s;
+}
+
+.producto:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px #ff2ad4;
+}
+
+.producto img{
+width:100%;
+border-radius:12px;
+}
+
+.producto button{
+margin-top:10px;
+padding:10px 25px;
+background:#ff2ad4;
+border:none;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+.beneficios{
+padding:100px 20px;
+background:#0a0a0a;
+text-align:center;
+}
+
+.beneficios-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.beneficio{
+background:#111;
+padding:30px;
+border-radius:15px;
+}
+
+.testimonios{
+padding:120px 20px;
+text-align:center;
+}
+
+.testimonios-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.testimonio{
+background:#0a0a0a;
+padding:30px;
+border-radius:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#25D366;
+padding:15px;
+font-size:28px;
+border-radius:50%;
+text-decoration:none;
+color:white;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#000;
+}
+
+</style>
 
 </head>
 
 <body>
-
 
 <header>
 
@@ -25,7 +195,6 @@
 
 <a href="#inicio">Inicio</a>
 <a href="#productos">Colección</a>
-<a href="#video">Experiencia</a>
 <a href="#contacto">Contacto</a>
 
 </nav>
@@ -33,94 +202,69 @@
 </header>
 
 
+<section class="hero" id="inicio">
 
-<section id="inicio" class="hero">
+<div>
 
-<div class="hero-text">
+<h1>Elegancia que marca presencia</h1>
 
-<h1>Elegancia. Estilo. Exclusividad.</h1>
+<p>Diseños exclusivos para quienes valoran estilo y calidad</p>
 
-<p>Productos premium seleccionados para clientes exigentes</p>
-
-<a href="#productos" class="btn">Descubrir colección</a>
-
-</div>
-
-</section>
-
-
-
-<section id="video" class="video">
-
-<h2>Nuestra experiencia</h2>
-
-<div class="video-box">
-
-<iframe
-src="https://www.youtube.com/embed/VIDEOID"
-frameborder="0"
-allowfullscreen>
-</iframe>
+<a class="btn" href="#productos">Explorar colección</a>
 
 </div>
 
 </section>
 
 
+<section class="video">
 
-<section id="productos" class="productos">
+<h2>Conoce la experiencia EMESTÉ</h2>
 
-<h2>Colección Premium</h2>
+<iframe src="https://www.youtube.com/embed/VIDEOID"></iframe>
+
+</section>
+
+
+<section class="productos" id="productos">
+
+<h2>Colección destacada</h2>
 
 <div class="grid">
 
 <div class="producto">
 
-<img src="img/producto1.jpg">
+<img src="https://via.placeholder.com/400">
+
+<h3>Edición Exclusiva</h3>
+
+<p>$49.990</p>
+
+<button onclick="comprar('Edición Exclusiva')">Comprar</button>
+
+</div>
+
+<div class="producto">
+
+<img src="https://via.placeholder.com/400">
 
 <h3>Producto Premium</h3>
 
-<p>$45.000</p>
+<p>$59.990</p>
 
-<button onclick="comprar('Producto Premium','$45.000')">
-
-Comprar
-
-</button>
+<button onclick="comprar('Producto Premium')">Comprar</button>
 
 </div>
 
-
 <div class="producto">
 
-<img src="img/producto2.jpg">
+<img src="https://via.placeholder.com/400">
 
-<h3>Edición Especial</h3>
+<h3>Selección de Lujo</h3>
 
-<p>$60.000</p>
+<p>$69.990</p>
 
-<button onclick="comprar('Edición Especial','$60.000')">
-
-Comprar
-
-</button>
-
-</div>
-
-
-<div class="producto">
-
-<img src="img/producto3.jpg">
-
-<h3>Selección Exclusiva</h3>
-
-<p>$85.000</p>
-
-<button onclick="comprar('Selección Exclusiva','$85.000')">
-
-Comprar
-
-</button>
+<button onclick="comprar('Selección de Lujo')">Comprar</button>
 
 </div>
 
@@ -129,30 +273,77 @@ Comprar
 </section>
 
 
+<section class="beneficios">
 
-<section id="contacto">
+<h2>Compra con confianza</h2>
 
-<h2>Contacto directo</h2>
+<div class="beneficios-grid">
 
-<p>Atención personalizada vía WhatsApp</p>
+<div class="beneficio">
 
-<a class="btn" href="https://wa.me/56900000000">
+🚚 Envíos a todo Chile
 
-Hablar con un asesor
+</div>
 
-</a>
+<div class="beneficio">
 
+⭐ Productos seleccionados
 
-<div class="mapa">
+</div>
 
-<iframe
-src="https://maps.google.com/maps?q=vi%C3%B1a%20del%20mar&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
+<div class="beneficio">
+
+💬 Atención personalizada
+
+</div>
+
+<div class="beneficio">
+
+🔒 Compra segura
+
+</div>
 
 </div>
 
 </section>
 
+
+<section class="testimonios">
+
+<h2>Testimonios de clientes</h2>
+
+<div class="testimonios-grid">
+
+<div class="testimonio">
+
+"Increíble calidad y servicio."
+
+<br><br>
+
+— Daniela R.
+
+</div>
+
+<div class="testimonio">
+
+"Productos elegantes y entrega rápida."
+
+<br><br>
+
+— Carlos M.
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© EMESTÉ 2026</p>
+
+</footer>
 
 
 <a class="whatsapp" href="https://wa.me/56900000000">
@@ -162,7 +353,21 @@ src="https://maps.google.com/maps?q=vi%C3%B1a%20del%20mar&t=&z=13&ie=UTF8&iwloc=
 </a>
 
 
-<script src="script.js"></script>
+<script>
+
+function comprar(producto){
+
+let telefono="56900000000"
+
+let mensaje="Hola quiero comprar "+producto
+
+let url="https://wa.me/"+telefono+"?text="+encodeURIComponent(mensaje)
+
+window.open(url)
+
+}
+
+</script>
 
 </body>
 </html>
