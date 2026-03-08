@@ -1,354 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Premium</title>
 
-<title>EMESTÉ Store</title>
+<link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#0a0a0a;
-color:white;
-overflow-x:hidden;
-}
-
-/* ANIMACIONES */
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-.animate{
-animation:fadeUp 1s ease forwards;
-}
-
-/* NAVBAR */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:black;
-border-bottom:1px solid #222;
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.logo{
-font-size:28px;
-font-weight:700;
-color:#d4af37;
-transition:.4s;
-}
-
-.logo:hover{
-transform:scale(1.1);
-}
-
-nav a{
-color:#ccc;
-text-decoration:none;
-margin-left:25px;
-font-size:14px;
-transition:.3s;
-}
-
-nav a:hover{
-color:#d4af37;
-}
-
-/* HERO */
-
-.hero{
-height:550px;
-display:flex;
-align-items:center;
-padding-left:10%;
-background:
-linear-gradient(90deg,#000000 40%,transparent),
-url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{
-font-size:55px;
-}
-
-.hero span{
-color:#d4af37;
-}
-
-.hero p{
-margin-top:10px;
-color:#ccc;
-}
-
-.hero button{
-margin-top:20px;
-padding:15px 35px;
-background:#d4af37;
-border:none;
-font-weight:600;
-cursor:pointer;
-transition:.4s;
-}
-
-.hero button:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px #d4af37;
-}
-
-/* BENEFICIOS */
-
-.benefits{
-display:flex;
-justify-content:space-around;
-padding:20px;
-background:#111;
-border-top:1px solid #222;
-border-bottom:1px solid #222;
-}
-
-.benefits div{
-transition:.4s;
-}
-
-.benefits div:hover{
-transform:scale(1.1);
-color:#d4af37;
-}
-
-/* PRODUCTOS */
-
-.products{
-padding:70px 10%;
-text-align:center;
-}
-
-.products h2{
-color:#d4af37;
-margin-bottom:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-}
-
-.product{
-background:#111;
-padding:15px;
-border-radius:8px;
-transition:.4s;
-}
-
-.product:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 0 20px #d4af37;
-}
-
-.product img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:6px;
-transition:.4s;
-}
-
-.product:hover img{
-transform:scale(1.1);
-}
-
-.product h3{
-margin-top:10px;
-}
-
-.price{
-color:#d4af37;
-margin-top:5px;
-font-weight:bold;
-}
-
-.product button{
-margin-top:10px;
-padding:12px;
-border:none;
-background:#d4af37;
-cursor:pointer;
-width:100%;
-font-weight:600;
-transition:.4s;
-}
-
-.product button:hover{
-background:#f3c860;
-}
-
-/* OFERTAS */
-
-.offers{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-padding:60px 10%;
-}
-
-.offer{
-background:#111;
-padding:40px;
-border-radius:8px;
-transition:.4s;
-}
-
-.offer:hover{
-transform:scale(1.03);
-box-shadow:0 0 20px #d4af37;
-}
-
-.offer h3{
-color:#d4af37;
-font-size:26px;
-}
-
-/* PAGOS */
-
-.payments{
-text-align:center;
-padding:40px;
-background:#050505;
-}
-
-.payments img{
-height:40px;
-margin:10px;
-transition:.4s;
-}
-
-.payments img:hover{
-transform:scale(1.2);
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-background:black;
-margin-top:40px;
-}
-
-/* CARRITO */
-
-.cart{
-position:fixed;
-right:0;
-top:0;
-width:320px;
-height:100%;
-background:#111;
-padding:20px;
-transform:translateX(100%);
-transition:.5s;
-overflow:auto;
-}
-
-.cart.active{
-transform:translateX(0);
-}
-
-.cart-item{
-margin-top:15px;
-border-bottom:1px solid #333;
-padding-bottom:10px;
-}
-
-.cart-btn{
-position:fixed;
-bottom:30px;
-right:30px;
-background:#d4af37;
-padding:15px;
-border-radius:50%;
-cursor:pointer;
-font-size:22px;
-transition:.4s;
-}
-
-.cart-btn:hover{
-transform:scale(1.2);
-}
-
-.checkout{
-display:block;
-margin-top:20px;
-background:#d4af37;
-padding:15px;
-text-align:center;
-text-decoration:none;
-color:black;
-font-weight:bold;
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-
 <header>
 
-<div class="logo">EMESTÉ</div>
+<div class="logo">EMESTÉ STORE</div>
 
 <nav>
-
-<a href="#">Inicio</a>
-<a href="#">Moda</a>
-<a href="#">Tecnología</a>
-<a href="#">Hogar</a>
-<a href="#">Ofertas</a>
-
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#video">Video</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
 </header>
 
 
+<section id="inicio" class="hero">
 
-<section class="hero animate">
+<div class="hero-text">
 
-<div>
+<h1>Productos Premium</h1>
 
-<h1>LA ELECCIÓN AL ALCANCE <br><span>DE TUS MANOS</span></h1>
+<p>Calidad garantizada y envíos a todo Chile</p>
 
-<p>Encuentra todo lo que buscas en un solo lugar</p>
+<a href="#productos" class="btn">Ver productos</a>
 
-<button onclick="scrollProducts()">Ver Ofertas</button>
+</div>
+
+</section>
+
+
+<section id="video" class="video-section">
+
+<h2>Conoce nuestra tienda</h2>
+
+<div class="video-container">
+
+<iframe 
+width="100%" 
+height="400" 
+src="https://www.youtube.com/embed/VIDEOID" 
+frameborder="0" 
+allowfullscreen>
+</iframe>
 
 </div>
 
@@ -356,192 +62,67 @@ font-weight:bold;
 
 
 
-<section class="benefits animate">
+<section id="productos" class="productos">
 
-<div>🚚 Envíos a todo Chile</div>
-<div>🔒 Pagos seguros</div>
-<div>💬 Atención 24/7</div>
+<h2>Nuestros Productos</h2>
 
-</section>
+<div class="grid-productos">
 
-
-
-<section id="products" class="products animate">
-
-<h2>PRODUCTOS DESTACADOS</h2>
-
-<div class="grid">
-
-
-<div class="product">
-
-<img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b">
-
-<h3>Gorro EMESTÉ</h3>
-
-<p class="price">$12.990</p>
-
-<button onclick="addCart('Gorro EMESTÉ',12990)">Agregar al carrito</button>
-
+<div class="producto">
+<img src="img/producto1.jpg">
+<h3>Producto 1</h3>
+<p>$10.000</p>
+<button onclick="comprar('Producto 1')">Comprar</button>
 </div>
 
-
-<div class="product">
-
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-
-<h3>Polera Blanca EMESTÉ</h3>
-
-<p class="price">$14.990</p>
-
-<button onclick="addCart('Polera EMESTÉ',14990)">Agregar al carrito</button>
-
+<div class="producto">
+<img src="img/producto2.jpg">
+<h3>Producto 2</h3>
+<p>$12.000</p>
+<button onclick="comprar('Producto 2')">Comprar</button>
 </div>
 
-
-<div class="product">
-
-<img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12">
-
-<h3>Smartwatch Deportivo</h3>
-
-<p class="price">$29.990</p>
-
-<button onclick="addCart('Smartwatch',29990)">Agregar al carrito</button>
-
+<div class="producto">
+<img src="img/producto3.jpg">
+<h3>Producto 3</h3>
+<p>$15.000</p>
+<button onclick="comprar('Producto 3')">Comprar</button>
 </div>
-
-
-<div class="product">
-
-<img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa">
-
-<h3>Mochila Urbana</h3>
-
-<p class="price">$24.990</p>
-
-<button onclick="addCart('Mochila',24990)">Agregar al carrito</button>
-
-</div>
-
 
 </div>
 
 </section>
 
 
+<section id="contacto" class="contacto">
 
-<section class="offers animate">
+<h2>Contáctanos</h2>
 
-<div class="offer">
+<p>Pedidos y consultas por WhatsApp</p>
 
-<h3>SÚPER REBAJAS</h3>
-
-<p>Hasta 50% de descuento</p>
-
-</div>
-
-
-<div class="offer">
-
-<h3>TECNOLOGÍA TOP</h3>
-
-<p>Lo último en gadgets</p>
-
-</div>
-
-</section>
-
-
-
-<section class="payments animate">
-
-<h3>Métodos de pago</h3>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/MercadoPago_logo.svg">
-
-</section>
-
-
-
-<footer>
-
-© 2026 EMESTÉ Store
-
-</footer>
-
-
-
-<div class="cart" id="cart">
-
-<h2>Carrito</h2>
-
-<div id="cart-items"></div>
-
-<h3 id="total"></h3>
-
-<a class="checkout" href="https://www.mercadopago.cl/" target="_blank">
-Pagar ahora
+<a href="https://wa.me/56900000000" class="btn-contacto">
+Hablar por WhatsApp
 </a>
 
+<div class="ubicacion">
+
+<h3>Ubicación</h3>
+
+<iframe 
+src="https://maps.google.com/maps?q=vi%C3%B1a%20del%20mar&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
 </div>
 
-
-<div class="cart-btn" onclick="toggleCart()">
-
-🛒
-
-</div>
+</section>
 
 
+<a href="https://wa.me/56900000000" class="whatsapp">
+💬
+</a>
 
-<script>
 
-let cart=[]
-let total=0
-
-function addCart(name,price){
-
-cart.push({name,price})
-
-total+=price
-
-renderCart()
-
-}
-
-function renderCart(){
-
-let container=document.getElementById("cart-items")
-
-container.innerHTML=""
-
-cart.forEach(item=>{
-
-container.innerHTML+=`<div class="cart-item">${item.name} - $${item.price}</div>`
-
-})
-
-document.getElementById("total").innerText="Total: $"+total
-
-}
-
-function toggleCart(){
-
-document.getElementById("cart").classList.toggle("active")
-
-}
-
-function scrollProducts(){
-
-document.getElementById("products").scrollIntoView()
-
-}
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
 </html>
