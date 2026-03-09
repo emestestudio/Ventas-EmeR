@@ -10,69 +10,79 @@
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0a0a0a;
+font-family:Arial;
+background:#111;
 color:white;
 }
 
-/* HEADER */
-
 header{
 text-align:center;
-padding:50px 20px;
+padding:40px;
 background:black;
 }
 
 header img{
-width:180px;
+width:160px;
 }
 
-header h1{
-color:#ff2b2b;
-font-size:45px;
-margin:10px 0;
+h1{
+color:red;
+font-size:40px;
 }
-
-header p{
-color:#cccccc;
-font-size:18px;
-}
-
-/* PRODUCTOS */
 
 .productos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 padding:40px;
 }
 
 .producto{
-background:#141414;
-border-radius:12px;
-overflow:hidden;
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
 text-align:center;
-transition:0.3s;
-}
-
-.producto:hover{
-transform:scale(1.05);
 }
 
 .producto img{
 width:100%;
+border-radius:10px;
 }
-
-.producto h3{
-padding:15px;
-}
-
-/* BOTON */
 
 .btn{
 display:inline-block;
-margin-bottom:20px;
-padding:12px 22px;
+margin-top:10px;
+padding:12px 20px;
 background:#25D366;
 color:white;
-text-decoration:none
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.jpg">
+
+<h1>GORILLA'S CAPS</h1>
+
+<p>Mochilas Urbanas Premium</p>
+
+</header>
+
+<section class="productos">
+
+<div class="producto">
+<img src="mochila1.jpg">
+<a class="btn" href="https://wa.me/56982328639">Comprar</a>
+</div>
+
+<div class="producto">
+<img src="mochila2.jpg">
+<a class="btn" href
