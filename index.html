@@ -1,100 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
-<title>Gorilla's Caps Store</title>
+<title>Gorilla's Caps</title>
 
 <style>
 
 body{
-font-family:Arial;
-background:#111;
-color:white;
 margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0a0a0a;
+color:white;
 }
 
+/* HEADER */
+
 header{
-background:#000;
 text-align:center;
-padding:30px;
+padding:50px 20px;
+background:black;
 }
 
 header img{
-width:200px;
+width:180px;
 }
 
-h1{
+header h1{
 color:#ff2b2b;
+font-size:45px;
+margin:10px 0;
 }
+
+header p{
+color:#cccccc;
+font-size:18px;
+}
+
+/* PRODUCTOS */
 
 .productos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-padding:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:40px;
 }
 
 .producto{
-background:#1a1a1a;
-border-radius:10px;
+background:#141414;
+border-radius:12px;
 overflow:hidden;
 text-align:center;
-padding:10px;
+transition:0.3s;
+}
+
+.producto:hover{
+transform:scale(1.05);
 }
 
 .producto img{
 width:100%;
 }
 
-.btn{
-background:#25D366;
-padding:12px 20px;
-display:inline-block;
-margin-top:10px;
-border-radius:6px;
-color:white;
-text-decoration:none;
-font-weight:bold;
+.producto h3{
+padding:15px;
 }
 
-</style>
-</head>
+/* BOTON */
 
-<body>
-
-<header>
-<img src="logo gorillas caps.jpeg">
-<h1>GORILLA'S CAPS</h1>
-<p>Mochilas Urbanas Premium</p>
-</header>
-
-<section class="productos">
-
-<div class="producto">
-<img src="mochila verde.jpeg">
-<h3>Mochila Verde</h3>
-<a class="btn" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
-</div>
-
-<div class="producto">
-<img src="mochila blanca.jpeg">
-<h3>Mochila Blanca</h3>
-<a class="btn" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
-</div>
-
-<div class="producto">
-<img src="mochila mostaza.jpeg">
-<h3>Mochila Mostaza</h3>
-<a class="btn" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
-</div>
-
-<div class="producto">
-<img src="mochila morado blanco.jpeg">
-<h3>Mochila Graffiti</h3>
-<a class="btn" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
-</div>
-
-</section>
-
-</body>
-</html>
+.btn{
+display:inline-block;
+margin-bottom:20px;
+padding:12px 22px;
+background:#25D366;
+color:white;
+text-decoration:none
