@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="es">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,264 +17,116 @@ background:#0b0b0b;
 color:white;
 }
 
-/* HEADER */
-
 header{
-
 text-align:center;
-
-padding:70px 20px;
-
+padding:60px 20px;
 background:black;
-
 }
 
-header img{
-
-width:380px;
-
-animation:fadeIn 1.5s;
-
+.logo{
+width:220px;
+margin-bottom:10px;
 }
 
-header p{
-
-color:#bbb;
-
-margin-top:10px;
-
-}
-
-/* HERO */
-
-.hero{
-
-text-align:center;
-
-padding:40px;
-
-background:linear-gradient(black,#111);
-
-}
-
-.hero h1{
-
+h1{
 font-size:40px;
-
-color:#e6c06a;
-
+color:#d4af37;
+letter-spacing:3px;
 }
 
-.hero p{
-
+.sub{
 color:#aaa;
-
+margin-top:10px;
 }
 
-/* TITULO */
+section{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
 
 .titulo{
-
 text-align:center;
-
-font-size:32px;
-
-margin:60px 0 30px;
-
-color:#e6c06a;
-
+font-size:28px;
+color:#d4af37;
+margin-bottom:40px;
 }
-
-/* GRID */
 
 .grid{
-
 display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:40px;
-
-max-width:1400px;
-
-margin:auto;
-
-padding:20px;
-
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-/* PRODUCTO */
-
 .producto{
-
-background:#141414;
-
-border-radius:16px;
-
+background:#161616;
+border-radius:12px;
 overflow:hidden;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-
-transition:0.4s;
-
-position:relative;
-
+transition:.3s;
+box-shadow:0 10px 20px rgba(0,0,0,.6);
 }
 
 .producto:hover{
-
-transform:translateY(-8px) scale(1.03);
-
+transform:translateY(-10px);
 }
 
 .producto img{
-
 width:100%;
-
+display:block;
 }
 
-/* INFO */
-
 .info{
-
-padding:20px;
-
+padding:15px;
 }
 
 .info h3{
-
-margin:0 0 10px;
-
+margin:0 0 10px 0;
 }
-
-.info p{
-
-color:#aaa;
-
-font-size:14px;
-
-}
-
-/* PRECIO */
 
 .precio{
-
+color:#00ff88;
 font-size:22px;
-
-color:#e6c06a;
-
-margin-top:10px;
-
+font-weight:bold;
 }
-
-/* PRECIO ANTIGUO */
 
 .precio-antiguo{
-
 text-decoration:line-through;
-
 color:#777;
-
 font-size:14px;
-
 }
-
-/* BOTON */
 
 .btn{
-
 display:block;
-
 text-align:center;
-
-background:#25D366;
-
+background:#25d366;
 color:white;
-
 padding:12px;
-
-margin-top:12px;
-
+margin-top:10px;
 border-radius:8px;
-
 text-decoration:none;
-
 font-weight:bold;
-
 }
 
-/* ETIQUETA OFERTA */
-
-.oferta{
-
-position:absolute;
-
-top:10px;
-
-left:10px;
-
-background:red;
-
-padding:6px 12px;
-
-font-size:12px;
-
-font-weight:bold;
-
-border-radius:6px;
-
+.btn:hover{
+background:#1ebc59;
 }
 
-/* WHATSAPP FLOTANTE */
-
-.whatsapp-float{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-background:#25D366;
-
-color:white;
-
-padding:16px;
-
-border-radius:50%;
-
-font-size:22px;
-
-text-decoration:none;
-
-box-shadow:0 5px 20px rgba(0,0,0,0.5);
-
+.pack{
+border:2px solid #d4af37;
 }
 
-/* FOOTER */
+.pack img{
+width:50%;
+}
+
+.pack-img{
+display:flex;
+}
 
 footer{
-
-margin-top:60px;
-
-padding:40px;
-
 text-align:center;
-
-background:black;
-
+padding:30px;
 color:#777;
-
-}
-
-/* ANIMACION */
-
-@keyframes fadeIn{
-
-from{opacity:0;}
-
-to{opacity:1;}
-
 }
 
 </style>
@@ -285,193 +137,111 @@ to{opacity:1;}
 
 <header>
 
-<img src="logo.jpg">
+<img src="logo.jpg" class="logo">
 
-<p>Tienda oficial EMESTÉ</p>
+<h1>EMESTÉ STORE</h1>
+
+<div class="sub">Mochilas Urbanas Premium</div>
 
 </header>
 
-<section class="hero">
-
-<h1>Mochilas Urbanas Premium</h1>
-
-<p>Diseño moderno · calidad premium · estilo urbano</p>
-
-</section>
+<section>
 
 <h2 class="titulo">🔥 PACK OFERTA</h2>
 
-<section class="grid">
+<div class="grid">
 
-<div class="producto">
+<div class="producto pack">
 
-<div class="oferta">OFERTA</div>
+<div class="pack-img">
 
-<img src="mochila1.jpg">
+<img src="mochila6.jpg">
+<img src="mochila9.jpg">
+
+</div>
 
 <div class="info">
 
 <h3>Pack Mochila + Banano</h3>
 
-<p>Mochila premium + banano a juego.</p>
+<p>Mochila urbana premium + banano a juego</p>
 
 <div class="precio-antiguo">$89.990</div>
-
 <div class="precio">$74.990</div>
 
-<a class="btn" href="https://wa.me/56982328639">Comprar</a>
+<a class="btn" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
 
 </div>
-
-</div>
-
-</section>
-
-<h2 class="titulo">MOCHILAS CUERINA</h2>
-
-<section class="grid">
-
-<div class="producto">
-
-<img src="mochila1.jpg">
-
-<div class="info">
-
-<h3>Mochila Cuerina Blanca</h3>
-
-<p>Material cuerina premium.</p>
-
-<div class="precio">$49.990</div>
-
-<a class="btn" href="https://wa.me/56982328639">Comprar</a>
-
-</div>
-
-</div>
-
-<div class="producto">
-
-<img src="mochila7.jpg">
-
-<div class="info">
-
-<h3>Mochila Cuerina Verde</h3>
-
-<p>Modelo exclusivo.</p>
-
-<div class="precio">$49.990</div>
-
-<a class="btn" href="https://wa.me/56982328639">Comprar</a>
 
 </div>
 
 </div>
 
 </section>
+
+<section>
 
 <h2 class="titulo">MOCHILAS URBANAS</h2>
 
-<section class="grid">
+<div class="grid">
 
 <div class="producto">
-
 <img src="mochila2.jpg">
-
 <div class="info">
-
 <h3>Mochila Blanca</h3>
-
 <div class="precio">$49.990</div>
-
 <a class="btn" href="https://wa.me/56982328639">Comprar</a>
-
 </div>
-
 </div>
 
 <div class="producto">
-
 <img src="mochila3.jpg">
-
 <div class="info">
-
 <h3>Mochila Graffiti</h3>
-
 <div class="precio">$49.990</div>
-
 <a class="btn" href="https://wa.me/56982328639">Comprar</a>
-
 </div>
-
 </div>
 
 <div class="producto">
-
 <img src="mochila4.jpg">
-
 <div class="info">
-
 <h3>Mochila Mostaza</h3>
-
 <div class="precio">$49.990</div>
-
 <a class="btn" href="https://wa.me/56982328639">Comprar</a>
-
 </div>
-
 </div>
 
 <div class="producto">
-
 <img src="mochila5.jpg">
-
 <div class="info">
-
-<h3>Mochila Mostaza Premium</h3>
-
+<h3>Mochila Premium Mostaza</h3>
 <div class="precio">$49.990</div>
-
 <a class="btn" href="https://wa.me/56982328639">Comprar</a>
-
 </div>
-
 </div>
 
 <div class="producto">
-
 <img src="mochila6.jpg">
-
 <div class="info">
-
 <h3>Mochila Verde</h3>
-
 <div class="precio">$49.990</div>
-
 <a class="btn" href="https://wa.me/56982328639">Comprar</a>
-
 </div>
-
 </div>
 
 <div class="producto">
-
-<img src="mochila9.jpg">
-
+<img src="mochila7.jpg">
 <div class="info">
-
 <h3>Mochila Urban Art</h3>
-
 <div class="precio">$49.990</div>
-
 <a class="btn" href="https://wa.me/56982328639">Comprar</a>
-
+</div>
 </div>
 
 </div>
 
 </section>
-
-<a class="whatsapp-float" href="https://wa.me/56982328639">💬</a>
 
 <footer>
 
@@ -480,5 +250,4 @@ EMESTÉ STORE © 2026
 </footer>
 
 </body>
-
 </html>
