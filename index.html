@@ -15,55 +15,63 @@ margin:0;
 font-family:Arial;
 background:#0b0b0b;
 color:white;
+scroll-behavior:smooth;
 }
 
+/* HEADER */
+
 header{
-text-align:center;
-padding:60px 20px;
 background:black;
+text-align:center;
+padding:50px 20px;
 }
 
 .logo{
-width:220px;
-margin-bottom:10px;
+width:260px;
 }
 
-h1{
-font-size:40px;
+nav{
+margin-top:25px;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
 color:#d4af37;
-letter-spacing:3px;
 }
 
-.sub{
-color:#aaa;
-margin-top:10px;
-}
-
-section{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-}
+/* TITULOS */
 
 .titulo{
 text-align:center;
-font-size:28px;
 color:#d4af37;
-margin-bottom:40px;
+font-size:32px;
+margin:60px 0 30px 0;
 }
+
+/* GRID PRODUCTOS */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
+max-width:1200px;
+margin:auto;
+padding:20px;
 }
 
 .producto{
-background:#161616;
+background:#151515;
 border-radius:12px;
 overflow:hidden;
 transition:.3s;
-box-shadow:0 10px 20px rgba(0,0,0,.6);
+box-shadow:0 10px 20px rgba(0,0,0,.5);
 }
 
 .producto:hover{
@@ -72,27 +80,21 @@ transform:translateY(-10px);
 
 .producto img{
 width:100%;
-display:block;
 }
 
 .info{
 padding:15px;
 }
 
-.info h3{
-margin:0 0 10px 0;
-}
-
 .precio{
 color:#00ff88;
-font-size:22px;
+font-size:20px;
 font-weight:bold;
 }
 
 .precio-antiguo{
 text-decoration:line-through;
-color:#777;
-font-size:14px;
+color:#888;
 }
 
 .btn{
@@ -101,26 +103,30 @@ text-align:center;
 background:#25d366;
 color:white;
 padding:12px;
-margin-top:10px;
 border-radius:8px;
 text-decoration:none;
-font-weight:bold;
+margin-top:10px;
 }
 
-.btn:hover{
-background:#1ebc59;
+/* SECCIONES */
+
+section{
+padding-bottom:40px;
 }
 
-.pack{
-border:2px solid #d4af37;
-}
+/* BOTON WHATSAPP */
 
-.pack img{
-width:50%;
-}
-
-.pack-img{
-display:flex;
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25d366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,.6);
 }
 
 footer{
@@ -139,54 +145,25 @@ color:#777;
 
 <img src="logo.jpg" class="logo">
 
-<h1>EMESTÉ STORE</h1>
-
-<div class="sub">Mochilas Urbanas Premium</div>
+<nav>
+<a href="#mochilas">MOCHILAS</a>
+<a href="#gorros">GORROS</a>
+<a href="#promociones">PROMOCIONES</a>
+<a href="#ofertas">OFERTAS</a>
+</nav>
 
 </header>
 
-<section>
+<!-- MOCHILAS -->
 
-<h2 class="titulo">🔥 PACK OFERTA</h2>
+<section id="mochilas">
 
-<div class="grid">
-
-<div class="producto pack">
-
-<div class="pack-img">
-
-<img src="mochila6.jpg">
-<img src="mochila9.jpg">
-
-</div>
-
-<div class="info">
-
-<h3>Pack Mochila + Banano</h3>
-
-<p>Mochila urbana premium + banano a juego</p>
-
-<div class="precio-antiguo">$89.990</div>
-<div class="precio">$74.990</div>
-
-<a class="btn" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="titulo">MOCHILAS URBANAS</h2>
+<h2 class="titulo">MOCHILAS</h2>
 
 <div class="grid">
 
 <div class="producto">
-<img src="mochila2.jpg">
+<img src="mochila1.jpg">
 <div class="info">
 <h3>Mochila Blanca</h3>
 <div class="precio">$49.990</div>
@@ -204,7 +181,7 @@ color:#777;
 </div>
 
 <div class="producto">
-<img src="mochila4.jpg">
+<img src="mochila5.jpg">
 <div class="info">
 <h3>Mochila Mostaza</h3>
 <div class="precio">$49.990</div>
@@ -213,27 +190,9 @@ color:#777;
 </div>
 
 <div class="producto">
-<img src="mochila5.jpg">
-<div class="info">
-<h3>Mochila Premium Mostaza</h3>
-<div class="precio">$49.990</div>
-<a class="btn" href="https://wa.me/56982328639">Comprar</a>
-</div>
-</div>
-
-<div class="producto">
-<img src="mochila6.jpg">
-<div class="info">
-<h3>Mochila Verde</h3>
-<div class="precio">$49.990</div>
-<a class="btn" href="https://wa.me/56982328639">Comprar</a>
-</div>
-</div>
-
-<div class="producto">
 <img src="mochila7.jpg">
 <div class="info">
-<h3>Mochila Urban Art</h3>
+<h3>Mochila Verde</h3>
 <div class="precio">$49.990</div>
 <a class="btn" href="https://wa.me/56982328639">Comprar</a>
 </div>
@@ -242,6 +201,96 @@ color:#777;
 </div>
 
 </section>
+
+<!-- GORROS -->
+
+<section id="gorros">
+
+<h2 class="titulo">GORROS</h2>
+
+<div class="grid">
+
+<div class="producto">
+<img src="gorro1.jpg">
+<div class="info">
+<h3>Gorro Gorilla</h3>
+<div class="precio">$24.990</div>
+<a class="btn" href="https://wa.me/56982328639">Comprar</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="gorro2.jpg">
+<div class="info">
+<h3>Gorro Street</h3>
+<div class="precio">$24.990</div>
+<a class="btn" href="https://wa.me/56982328639">Comprar</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROMOCIONES -->
+
+<section id="promociones">
+
+<h2 class="titulo">PROMOCIONES</h2>
+
+<div class="grid">
+
+<div class="producto">
+
+<img src="mochila6.jpg">
+
+<div class="info">
+
+<h3>Pack Mochila + Banano</h3>
+
+<div class="precio-antiguo">$89.990</div>
+<div class="precio">$74.990</div>
+
+<a class="btn" href="https://wa.me/56982328639">Comprar</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OFERTAS -->
+
+<section id="ofertas">
+
+<h2 class="titulo">OFERTAS</h2>
+
+<div class="grid">
+
+<div class="producto">
+
+<img src="mochila9.jpg">
+
+<div class="info">
+
+<h3>Mochila Urban Art</h3>
+
+<div class="precio-antiguo">$49.990</div>
+<div class="precio">$39.990</div>
+
+<a class="btn" href="https://wa.me/56982328639">Comprar</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/56982328639">💬</a>
 
 <footer>
 
