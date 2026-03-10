@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
-<title>EMESTÉ Store</title>
-
+<title>EMESTÉ STORE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f0f0f;
+font-family:Arial;
+background:#0b0b0b;
 color:white;
 }
 
 /* HEADER */
 
 header{
-background:black;
-padding:40px 20px;
 text-align:center;
-border-bottom:1px solid #222;
+padding:60px 20px;
+background:black;
+animation:fadeIn 1.5s;
 }
 
 header img{
-width:220px;
-margin-bottom:10px;
+width:340px;
+margin-bottom:20px;
 }
 
-header h2{
-color:#ccc;
-font-weight:normal;
+header p{
+color:#bbb;
+font-size:18px;
 }
 
-/* GRID PRODUCTOS */
+/* TITULOS */
 
-.productos{
+.titulo{
+font-size:32px;
+text-align:center;
+margin:60px 0 30px;
+color:#e6c06a;
+}
+
+/* GRID */
+
+.grid{
 
 display:grid;
 
@@ -46,31 +55,35 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
 gap:40px;
 
-padding:50px;
-
 max-width:1400px;
 
 margin:auto;
 
+padding:20px;
+
 }
+
+/* PRODUCTO */
 
 .producto{
 
-background:#161616;
+background:#141414;
 
-border-radius:14px;
+border-radius:16px;
 
 overflow:hidden;
 
-box-shadow:0 5px 25px rgba(0,0,0,0.5);
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
 
-transition:0.3s;
+transition:0.4s;
+
+animation:fadeUp 1s;
 
 }
 
 .producto:hover{
 
-transform:translateY(-6px);
+transform:translateY(-8px) scale(1.03);
 
 }
 
@@ -82,51 +95,31 @@ width:100%;
 
 .info{
 
-padding:25px;
+padding:20px;
 
 }
 
 .info h3{
 
-margin:0 0 10px 0;
-
-font-size:22px;
-
-}
-
-.info p{
-
-color:#aaa;
-
-font-size:14px;
-
-line-height:1.6;
+margin:0 0 10px;
 
 }
 
 .precio{
 
-font-size:22px;
-
 color:#e6c06a;
 
-margin:15px 0;
+font-size:22px;
+
+margin:10px 0;
 
 }
 
 /* BOTONES */
 
-.botones{
-
-display:flex;
-
-gap:10px;
-
-}
-
 .btn{
 
-flex:1;
+display:block;
 
 text-align:center;
 
@@ -135,6 +128,8 @@ padding:12px;
 border-radius:8px;
 
 text-decoration:none;
+
+margin-top:10px;
 
 font-weight:bold;
 
@@ -148,19 +143,11 @@ color:white;
 
 }
 
-.detalles{
-
-background:#333;
-
-color:white;
-
-}
-
 /* FOOTER */
 
 footer{
 
-margin-top:50px;
+margin-top:60px;
 
 padding:40px;
 
@@ -170,6 +157,24 @@ background:black;
 
 color:#777;
 
+}
+
+/* ANIMACIONES */
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -182,106 +187,90 @@ color:#777;
 
 <img src="logo.jpg">
 
-<h2>Tienda oficial EMESTÉ</h2>
+<p>Mochilas urbanas premium</p>
 
 </header>
 
-<section class="productos">
+<h2 class="titulo">MOCHILAS CUERINA PREMIUM</h2>
+
+<section class="grid">
 
 <div class="producto">
-
 <img src="mochila1.jpg">
-
 <div class="info">
+<h3>Mochila Cuerina Blanca</h3>
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
+</div>
+</div>
 
+<div class="producto">
+<img src="mochila7.jpg">
+<div class="info">
+<h3>Mochila Cuerina Verde</h3>
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
+</div>
+</div>
+
+</section>
+
+<h2 class="titulo">MOCHILAS URBANAS</h2>
+
+<section class="grid">
+
+<div class="producto">
+<img src="mochila2.jpg">
+<div class="info">
 <h3>Mochila Urban Blanca</h3>
-
-<p>Mochila urbana premium fabricada con materiales resistentes, ideal para uso diario, viajes o universidad.</p>
-
-<div class="precio">$29.990</div>
-
-<div class="botones">
-
-<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
-
-<a class="btn detalles" href="#">Ver más</a>
-
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
 </div>
-
-</div>
-
 </div>
 
 <div class="producto">
-
 <img src="mochila3.jpg">
-
 <div class="info">
-
 <h3>Mochila Street Graffiti</h3>
-
-<p>Diseño moderno con estilo urbano exclusivo. Gran capacidad y compartimentos interiores.</p>
-
-<div class="precio">$32.990</div>
-
-<div class="botones">
-
-<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
-
-<a class="btn detalles" href="#">Ver más</a>
-
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
 </div>
-
-</div>
-
 </div>
 
 <div class="producto">
-
 <img src="mochila4.jpg">
-
 <div class="info">
-
-<h3>Mochila Mostaza Premium</h3>
-
-<p>Estilo moderno con costuras reforzadas, ideal para llevar notebook y accesorios.</p>
-
-<div class="precio">$34.990</div>
-
-<div class="botones">
-
-<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
-
-<a class="btn detalles" href="#">Ver más</a>
-
+<h3>Mochila Mostaza</h3>
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
 </div>
-
-</div>
-
 </div>
 
 <div class="producto">
-
-<img src="mochila6.jpg">
-
+<img src="mochila5.jpg">
 <div class="info">
-
-<h3>Mochila Green Edition</h3>
-
-<p>Modelo exclusivo con diseño minimalista y gran comodidad para el día a día.</p>
-
-<div class="precio">$31.990</div>
-
-<div class="botones">
-
-<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
-
-<a class="btn detalles" href="#">Ver más</a>
-
+<h3>Mochila Mostaza Premium</h3>
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
+</div>
 </div>
 
+<div class="producto">
+<img src="mochila6.jpg">
+<div class="info">
+<h3>Mochila Verde</h3>
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
+</div>
 </div>
 
+<div class="producto">
+<img src="mochila9.jpg">
+<div class="info">
+<h3>Mochila Urban Art</h3>
+<div class="precio">$49.990</div>
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar por WhatsApp</a>
+</div>
 </div>
 
 </section>
@@ -289,7 +278,7 @@ color:#777;
 <footer>
 
 EMESTÉ STORE © 2026
-Tienda online oficial
+Tienda oficial
 
 </footer>
 
