@@ -4,60 +4,172 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Gorilla's Caps</title>
+<title>EMESTÉ Store</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
-background:#111;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f0f0f;
 color:white;
 }
 
+/* HEADER */
+
 header{
-text-align:center;
-padding:40px;
 background:black;
+padding:40px 20px;
+text-align:center;
+border-bottom:1px solid #222;
 }
 
 header img{
-width:160px;
+width:220px;
+margin-bottom:10px;
 }
 
-h1{
-color:red;
-font-size:40px;
+header h2{
+color:#ccc;
+font-weight:normal;
 }
+
+/* GRID PRODUCTOS */
 
 .productos{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-padding:40px;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:40px;
+
+padding:50px;
+
+max-width:1400px;
+
+margin:auto;
+
 }
 
 .producto{
-background:#1a1a1a;
-padding:20px;
-border-radius:10px;
-text-align:center;
+
+background:#161616;
+
+border-radius:14px;
+
+overflow:hidden;
+
+box-shadow:0 5px 25px rgba(0,0,0,0.5);
+
+transition:0.3s;
+
+}
+
+.producto:hover{
+
+transform:translateY(-6px);
+
 }
 
 .producto img{
+
 width:100%;
-border-radius:10px;
+
+}
+
+.info{
+
+padding:25px;
+
+}
+
+.info h3{
+
+margin:0 0 10px 0;
+
+font-size:22px;
+
+}
+
+.info p{
+
+color:#aaa;
+
+font-size:14px;
+
+line-height:1.6;
+
+}
+
+.precio{
+
+font-size:22px;
+
+color:#e6c06a;
+
+margin:15px 0;
+
+}
+
+/* BOTONES */
+
+.botones{
+
+display:flex;
+
+gap:10px;
+
 }
 
 .btn{
-display:inline-block;
-margin-top:10px;
-padding:12px 20px;
-background:#25D366;
-color:white;
+
+flex:1;
+
+text-align:center;
+
+padding:12px;
+
+border-radius:8px;
+
 text-decoration:none;
-border-radius:6px;
+
 font-weight:bold;
+
+}
+
+.whatsapp{
+
+background:#25D366;
+
+color:white;
+
+}
+
+.detalles{
+
+background:#333;
+
+color:white;
+
+}
+
+/* FOOTER */
+
+footer{
+
+margin-top:50px;
+
+padding:40px;
+
+text-align:center;
+
+background:black;
+
+color:#777;
+
 }
 
 </style>
@@ -70,19 +182,117 @@ font-weight:bold;
 
 <img src="logo.jpg">
 
-<h1>GORILLA'S CAPS</h1>
-
-<p>Mochilas Urbanas Premium</p>
+<h2>Tienda oficial EMESTÉ</h2>
 
 </header>
 
 <section class="productos">
 
 <div class="producto">
+
 <img src="mochila1.jpg">
-<a class="btn" href="https://wa.me/56982328639">Comprar</a>
+
+<div class="info">
+
+<h3>Mochila Urban Blanca</h3>
+
+<p>Mochila urbana premium fabricada con materiales resistentes, ideal para uso diario, viajes o universidad.</p>
+
+<div class="precio">$29.990</div>
+
+<div class="botones">
+
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
+
+<a class="btn detalles" href="#">Ver más</a>
+
+</div>
+
+</div>
+
 </div>
 
 <div class="producto">
-<img src="mochila2.jpg">
-<a class="btn" href
+
+<img src="mochila3.jpg">
+
+<div class="info">
+
+<h3>Mochila Street Graffiti</h3>
+
+<p>Diseño moderno con estilo urbano exclusivo. Gran capacidad y compartimentos interiores.</p>
+
+<div class="precio">$32.990</div>
+
+<div class="botones">
+
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
+
+<a class="btn detalles" href="#">Ver más</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="producto">
+
+<img src="mochila4.jpg">
+
+<div class="info">
+
+<h3>Mochila Mostaza Premium</h3>
+
+<p>Estilo moderno con costuras reforzadas, ideal para llevar notebook y accesorios.</p>
+
+<div class="precio">$34.990</div>
+
+<div class="botones">
+
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
+
+<a class="btn detalles" href="#">Ver más</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="producto">
+
+<img src="mochila6.jpg">
+
+<div class="info">
+
+<h3>Mochila Green Edition</h3>
+
+<p>Modelo exclusivo con diseño minimalista y gran comodidad para el día a día.</p>
+
+<div class="precio">$31.990</div>
+
+<div class="botones">
+
+<a class="btn whatsapp" href="https://wa.me/56982328639">Comprar</a>
+
+<a class="btn detalles" href="#">Ver más</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+EMESTÉ STORE © 2026
+Tienda online oficial
+
+</footer>
+
+</body>
+
+</html>
